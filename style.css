@@ -1,0 +1,112 @@
+/* Primary web font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* custom properties */
+
+:root {
+    /* typography */
+    --font-primary: 'Open Sans';
+    --font-secondary: Arial;
+    --font-generic: sans-serif;
+    --nav-links-fs: 1.2rem;
+    --h1-fs: 2.5rem;
+    --body-fs: 1rem;
+    --body-lh: 1.5rem;
+
+    /* colors */
+    --headings-color: #222222;
+    --text-color: #333333;
+    --alt-text-color: #999999;
+    --bg-color: #ffffff;
+    --nav-bg-color: #006699;
+
+    /* margins */
+    --top-margin: 1.3rem;
+    --bottom-margin: 0.6rem;
+
+    /* others */
+    --grid-gap: 0.3rem;
+
+}
+body {
+    font-family: var(--font-primary), var(--font-secondary), var(--font-generic);
+}
+
+
+.header {
+    background-color: var(--nav-bg-color);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.header__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header__nav-item {
+    text-align: center;
+    text-decoration: none;
+    color: var(--bg-color);
+    font-size: var(--nav-links-fs);
+}
+
+.main {
+    margin-top: var(--top-margin);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.about__picture {
+    border: 2px solid var(--nav-bg-color);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.title {
+    text-align: center;
+    color: var(--headings-color);
+    margin: var(--top-margin) 0 0;   
+    font-size: var(--h1-fs);
+}
+
+.about__body {
+    text-align: center;
+    padding: 1rem;
+    font-size: var(--body-fs);
+    line-height: var(--body-lh);
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+}
+
+.portfolio__grid-item-image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    object-fit: cover;
+}
